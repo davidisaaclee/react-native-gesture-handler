@@ -39,7 +39,7 @@ export type {
   FlingGestureHandlerProps,
 } from './handlers/FlingGestureHandler';
 export type {
-  TransformGestureHandlerEventPayload,
+  TransformGestureHandlerPayload,
   TransformGestureHandlerProps,
 } from './handlers/TransformGestureHandler';
 export { TapGestureHandler } from './handlers/TapGestureHandler';

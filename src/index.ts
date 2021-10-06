@@ -38,6 +38,10 @@ export type {
   FlingGestureHandlerEventPayload,
   FlingGestureHandlerProps,
 } from './handlers/FlingGestureHandler';
+export type {
+  TransformGestureHandlerEventPayload,
+  TransformGestureHandlerProps,
+} from './handlers/TransformGestureHandler';
 export { TapGestureHandler } from './handlers/TapGestureHandler';
 export { ForceTouchGestureHandler } from './handlers/ForceTouchGestureHandler';
 export { LongPressGestureHandler } from './handlers/LongPressGestureHandler';
@@ -45,6 +49,7 @@ export { PanGestureHandler } from './handlers/PanGestureHandler';
 export { PinchGestureHandler } from './handlers/PinchGestureHandler';
 export { RotationGestureHandler } from './handlers/RotationGestureHandler';
 export { FlingGestureHandler } from './handlers/FlingGestureHandler';
+export { TransformGestureHandler } from './handlers/TransformGestureHandler';
 export { default as createNativeWrapper } from './handlers/createNativeWrapper';
 export type {
   NativeViewGestureHandlerPayload,
@@ -99,6 +104,8 @@ export type {
   RotationGestureHandlerStateChangeEvent,
   FlingGestureHandlerGestureEvent,
   FlingGestureHandlerStateChangeEvent,
+  TransformGestureHandlerGestureEvent,
+  TransformGestureHandlerStateChangeEvent,
   // handlers props
   NativeViewGestureHandlerProperties,
   TapGestureHandlerProperties,
@@ -108,6 +115,7 @@ export type {
   RotationGestureHandlerProperties,
   FlingGestureHandlerProperties,
   ForceTouchGestureHandlerProperties,
+  TransformGestureHandlerProperties,
   // buttons props
   RawButtonProperties,
   BaseButtonProperties,

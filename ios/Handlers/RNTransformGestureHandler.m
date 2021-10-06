@@ -4,7 +4,6 @@
 
 @implementation RNTransformGestureHandler {
     CGAffineTransform accumulatedTransform;
-    CGFloat maxYTranslation;
     bool didSetInitialTransform;
 }
 
@@ -13,7 +12,6 @@
   if ((self = [super initWithTag:tag])) {
       _recognizer = [[NaturalTransformGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
       accumulatedTransform = CGAffineTransformIdentity;
-      maxYTranslation = CGFLOAT_MAX;
       didSetInitialTransform = false;
   }
   return self;
@@ -25,10 +23,6 @@
     CGAffineTransform nextAccumulatedTransform =
         CGAffineTransformConcat(accumulatedTransform,
                                 recognizer.transformFromLastChange);
-    
-    if (nextAccumulatedTransform.ty > maxYTranslation) {
-        nextAccumulatedTransform.ty = maxYTranslation;
-    }
     accumulatedTransform = nextAccumulatedTransform;
 }
 
@@ -39,11 +33,6 @@
     if (prop != nil && !didSetInitialTransform) {
         accumulatedTransform = [RCTConvert CGAffineTransform:prop];
         didSetInitialTransform = true;
-    }
-    
-    prop = config[@"maxYTranslation"];
-    if (prop != nil) {
-        maxYTranslation = [RCTConvert CGFloat:prop];
     }
 }
 

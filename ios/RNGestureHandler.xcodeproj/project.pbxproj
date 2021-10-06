@@ -37,6 +37,7 @@
 		636ABB0E270E187900ACF16C /* AllTouchesGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636ABB0D270E187900ACF16C /* AllTouchesGestureRecognizer.swift */; };
 		636ABB11270E190F00ACF16C /* RNTransformGestureHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 636ABB0F270E190F00ACF16C /* RNTransformGestureHandler.m */; };
 		636ABB12270E190F00ACF16C /* RNTransformGestureHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 636ABB10270E190F00ACF16C /* RNTransformGestureHandler.h */; };
+		636ABB17270E202200ACF16C /* RNGestureHandler-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 636ABB16270E202200ACF16C /* RNGestureHandler-Bridging-Header.h */; };
 		660F46742080D8F700B7B50D /* RNGestureHandlerDirection.h in Headers */ = {isa = PBXBuildFile; fileRef = 660F46732080D8F600B7B50D /* RNGestureHandlerDirection.h */; };
 		668E083C21BDD70900EDDF40 /* RNForceTouchHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 668E083A21BDD70900EDDF40 /* RNForceTouchHandler.h */; };
 		668E083D21BDD70900EDDF40 /* RNForceTouchHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 668E083B21BDD70900EDDF40 /* RNForceTouchHandler.m */; };
@@ -126,10 +127,10 @@
 		44AEC72E1F8FA1270086889F /* RNTapHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNTapHandler.m; path = Handlers/RNTapHandler.m; sourceTree = "<group>"; };
 		44BE34471F1E1AAA008679D1 /* RNGestureHandlerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNGestureHandlerManager.m; sourceTree = "<group>"; };
 		44BE34491F1E1ABA008679D1 /* RNGestureHandlerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNGestureHandlerManager.h; sourceTree = "<group>"; };
-		636ABB0C270E187800ACF16C /* RNGestureHandler-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNGestureHandler-Bridging-Header.h"; sourceTree = "<group>"; };
 		636ABB0D270E187900ACF16C /* AllTouchesGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AllTouchesGestureRecognizer.swift; path = Handlers/AllTouchesGestureRecognizer.swift; sourceTree = "<group>"; };
 		636ABB0F270E190F00ACF16C /* RNTransformGestureHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNTransformGestureHandler.m; path = Handlers/RNTransformGestureHandler.m; sourceTree = "<group>"; };
 		636ABB10270E190F00ACF16C /* RNTransformGestureHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNTransformGestureHandler.h; path = Handlers/RNTransformGestureHandler.h; sourceTree = "<group>"; };
+		636ABB16270E202200ACF16C /* RNGestureHandler-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RNGestureHandler-Bridging-Header.h"; sourceTree = "<group>"; };
 		660F46732080D8F600B7B50D /* RNGestureHandlerDirection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNGestureHandlerDirection.h; sourceTree = "<group>"; };
 		668E083A21BDD70900EDDF40 /* RNForceTouchHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNForceTouchHandler.h; path = Handlers/RNForceTouchHandler.h; sourceTree = "<group>"; };
 		668E083B21BDD70900EDDF40 /* RNForceTouchHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNForceTouchHandler.m; path = Handlers/RNForceTouchHandler.m; sourceTree = "<group>"; };
@@ -193,7 +194,7 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				636ABB0C270E187800ACF16C /* RNGestureHandler-Bridging-Header.h */,
+				636ABB16270E202200ACF16C /* RNGestureHandler-Bridging-Header.h */,
 				660F46732080D8F600B7B50D /* RNGestureHandlerDirection.h */,
 				44AEC7221F8FA1150086889F /* Handlers */,
 				44AEC7161F8F9C090086889F /* RNGestureHandlerRegistry.m */,
@@ -236,6 +237,7 @@
 				44BE344A1F1E1ABA008679D1 /* RNGestureHandlerManager.h in Headers */,
 				446E7FF61ED89A31009282E7 /* RNGestureHandlerEvents.h in Headers */,
 				44AEC7391F8FA1270086889F /* RNTapHandler.h in Headers */,
+				636ABB17270E202200ACF16C /* RNGestureHandler-Bridging-Header.h in Headers */,
 				44AEC7111F8F9B6C0086889F /* RNRootViewGestureRecognizer.h in Headers */,
 				44AEC7311F8FA1270086889F /* RNNativeViewHandler.h in Headers */,
 				446E7FE71ED6E177009282E7 /* RNGestureHandlerState.h in Headers */,

@@ -16,6 +16,7 @@ import { TouchablesIndex, TouchableExample } from './release_tests/touchables';
 import Rows from './release_tests/rows';
 import NestedGestureHandlerRootViewWithModal from './release_tests/nestedGHRootViewWithModal';
 import { PinchableBox } from './recipes/scaleAndRotate';
+import NaturalTransform from './recipes/naturalTransform';
 import PanAndScroll from './recipes/panAndScroll';
 import { BottomSheet } from './showcase/bottomSheet';
 import Swipeables from './showcase/swipeable';
@@ -55,6 +56,7 @@ const EXAMPLES: ExamplesSection[] = [
     data: [
       { name: 'Pinch & rotate', component: PinchableBox },
       { name: 'Pan & scroll', component: PanAndScroll },
+      { name: 'Natural transform', component: NaturalTransform },
     ],
   },
   {

@@ -4,6 +4,7 @@
 
 @implementation RNTransformGestureHandler {
     CGAffineTransform accumulatedTransform;
+    CGAffineTransform transformFromLastChange;
     bool didSetInitialTransform;
 }
 
@@ -12,6 +13,7 @@
   if ((self = [super initWithTag:tag])) {
       _recognizer = [[NaturalTransformGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
       accumulatedTransform = CGAffineTransformIdentity;
+      transformFromLastChange = CGAffineTransformIdentity;
       didSetInitialTransform = false;
   }
   return self;
@@ -20,6 +22,7 @@
 - (void)handleGesture:(NaturalTransformGestureRecognizer *)recognizer {
     [super handleGesture:recognizer];
     
+    transformFromLastChange = recognizer.transformFromLastChange;
     CGAffineTransform nextAccumulatedTransform =
         CGAffineTransformConcat(accumulatedTransform,
                                 recognizer.transformFromLastChange);
@@ -38,12 +41,25 @@
 
 - (RNGestureHandlerEventExtraData *)eventExtraData:(NaturalTransformGestureRecognizer *)recognizer{
     return [[RNGestureHandlerEventExtraData alloc] initWithData:@{
+        @"transformFromLastChange": self.transformFromLastChangeAsDictionary,
         @"transform": self.accumulatedTransformAsDictionary
     }];
 }
 
 - (NSDictionary *)accumulatedTransformAsDictionary {
     CGAffineTransform xf = accumulatedTransform;
+    return @{
+        @"a": [NSNumber numberWithDouble:xf.a],
+        @"b": [NSNumber numberWithDouble:xf.b],
+        @"c": [NSNumber numberWithDouble:xf.c],
+        @"d": [NSNumber numberWithDouble:xf.d],
+        @"tx": [NSNumber numberWithDouble:xf.tx],
+        @"ty": [NSNumber numberWithDouble:xf.ty],
+    };
+}
+
+- (NSDictionary *)transformFromLastChangeAsDictionary {
+    CGAffineTransform xf = transformFromLastChange;
     return @{
         @"a": [NSNumber numberWithDouble:xf.a],
         @"b": [NSNumber numberWithDouble:xf.b],

@@ -13,6 +13,14 @@ export type TransformGestureHandlerPayload = {
     tx: number;
     ty: number;
   };
+  transformFromLastChange: {
+    a: number;
+    b: number;
+    c: number;
+    d: number;
+    tx: number;
+    ty: number;
+  };
 };
 
 export interface TransformGestureHandlerProps
